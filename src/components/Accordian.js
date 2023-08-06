@@ -9,7 +9,9 @@ const Accordian = ({ data }) => {
     <div className='accordian'>
       {data.map(
         (el, i) =>
-          <AccordianItem num={i + 1} title={el.title} text={el.text} key={i} curOpen={curOpen} handleCurOpen={setCurOpen} />
+          <AccordianItem num={i + 1} title={el.title} text={el.text} key={i} curOpen={curOpen} handleCurOpen={setCurOpen}>
+            <div className='content-box'>{el.text}</div>
+          </AccordianItem>
       )}
     </div>
   )
